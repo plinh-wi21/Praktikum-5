@@ -37,9 +37,36 @@ Ein Beispiel für ein direkt im Dokument eingebettetes PlantUML-Diagramm.
 
 // diagram placeholder
 
+.Klassendiagramm mit PlantUML 
+[plantuml, "{diagramsdir}/syntax-example1", svg]  
+....
+class Graphic 
+interface Shape <<Interface>> {
+  draw()
+}
+class Circle
+class Triangle
+class Square
+
+Graphic -> Shape
+Shape <|.. Circle
+Shape <|.. Triangle
+Shape <|.. Square
+....
+
 === Inkludiert
 
 Ein Beispiel für ein im Dokument inkludiertes PlantUML-Diagramm als externe Datei.
 
 // diagram placeholder
 
+.Klassendiagramm mit PlantUML
+[plantuml, "{diagramsdir}/syntax-example2", svg]
+....
+include::{plantumlsdir}/syntax-example2.puml[]
+....
+
+.Usecasediagramm mit PlantUML
+[plantuml, "{diagramsdir}/example_usecase-diagram", svg]
+....
+include::{plantumlsdir}/example_usecase-diagram.puml[]
